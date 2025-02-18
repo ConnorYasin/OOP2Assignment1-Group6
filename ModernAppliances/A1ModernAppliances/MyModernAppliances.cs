@@ -52,7 +52,12 @@ namespace ModernAppliances
             {
                 if (foundAppliance.IsAvailable == true)
                 {
-
+                    foundAppliance.Checkout();
+                    Console.WriteLine("Appliance has been checked out");
+                }
+                else 
+                {
+                    Console.WriteLine("The appliance is not availible to be checked out");
                 }
             }
             // Write "Appliance has been checked out."
