@@ -265,11 +265,12 @@ namespace ModernAppliances
             {
                 if (appliance is Microwave)
                 {
+                    Microwave microwave = (Microwave)appliance;
                     // Test room type equals 'A' or microwave room type
                     // Add current appliance in list to found list
                     if (roomtype == 'A')
                     {
-                        microwaveFoundApplianceList.Add(appliance);
+                        microwaveFoundApplianceList.Add(microwave);
                     }
                 }
             }
@@ -348,18 +349,18 @@ namespace ModernAppliances
             {
                 if (appliance is Dishwasher)
                 {
+                    Dishwasher dishwasher = (Dishwasher)appliance;
                     // Test sound rating is "Any" or equals soundrating for current dishwasher
                     // Add current appliance in list to found list
-                    if ((soundRating == "Any") || ())
+                    if ((soundRating == "Any") || (dishwasher.SoundRating == soundRating))
                     {
-
+                        dishwasherFoundApplianceList.Add(dishwasher);
                     }
                 }
             }
-
-
             // Display found appliances (up to max. number inputted)
             // DisplayAppliancesFromList(found, 0);
+            DisplayAppliancesFromList(dishwasherFoundApplianceList, 0);
         }
 
         /// <summary>
