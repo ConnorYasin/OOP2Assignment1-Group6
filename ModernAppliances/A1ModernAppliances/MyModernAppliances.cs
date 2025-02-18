@@ -365,7 +365,7 @@ namespace ModernAppliances
             }
             // Test input is "3"
             // Assign "Qu" to sound rating variable
-            else (userSoundRating == "3")
+            else if (userSoundRating == "3")
             {
                 soundRating = "Qu";
             }
