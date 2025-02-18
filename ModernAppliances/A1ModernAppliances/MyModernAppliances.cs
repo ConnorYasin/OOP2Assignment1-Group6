@@ -7,14 +7,14 @@ namespace ModernAppliances
     /// <summary>
     /// Manager class for Modern Appliances
     /// </summary>
-    /// <remarks>Author: </remarks>
-    /// <remarks>Date: </remarks>
+    /// <remarks>Authors:Connor Yasinski, David Cadena </remarks>
+    /// <remarks>Date:Febuary 18, 2025 </remarks>
     internal class MyModernAppliances : ModernAppliances
     {
         /// <summary>
         /// Option 1: Performs a checkout
         /// </summary>
-        public override void Checkout()
+        public override void Checkout() //Writen by Connor Yasinski
         {
             // Write "Enter the item number of an appliance: "
             Console.WriteLine("Enter the item number of an appliance");
@@ -185,7 +185,7 @@ namespace ModernAppliances
         /// <summary>
         /// Displays microwaves
         /// </summary>
-        public override void DisplayMicrowaves()
+        public override void DisplayMicrowaves() //Writen by Connor Yasinski
         {
             // Write "Possible options:"
 
@@ -226,7 +226,7 @@ namespace ModernAppliances
         /// <summary>
         /// Displays dishwashers
         /// </summary>
-        public override void DisplayDishwashers()
+        public override void DisplayDishwashers() //Writen by Connor Yasinski
         {
             // Write "Possible options:"
 
@@ -272,7 +272,7 @@ namespace ModernAppliances
         /// <summary>
         /// Generates random list of appliances
         /// </summary>
-        public override void RandomList()
+        public override void RandomList() //Writen by Connor Yasinski
         {
             // Write "Appliance Types"
 
