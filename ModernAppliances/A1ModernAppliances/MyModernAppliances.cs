@@ -66,7 +66,7 @@ namespace ModernAppliances
         public override void Find()
         {
             // Write "Enter brand to search for:"
-
+            Console.WriteLine("Enter brand to search for:");
             // Create string variable to hold entered brand
             // Get user input as string and assign to variable.
 
