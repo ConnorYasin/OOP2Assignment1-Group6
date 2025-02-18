@@ -68,18 +68,24 @@ namespace ModernAppliances
             // Write "Enter brand to search for:"
             Console.WriteLine("Enter brand to search for:");
             // Create string variable to hold entered brand
-            string selectedBrand = Convert.ToString(Console.Read());
+            string selectedBrand;
             // Get user input as string and assign to variable.
-
+            selectedBrand = Convert.ToString(Console.ReadLine());
             // Create list to hold found Appliance objects
-
+            var userfoundAppliances = new List<Appliance>();
             // Iterate through loaded appliances
+            foreach (var appliance in Appliances)
+            {
+
             // Test current appliance brand matches what user entered
+            if (selectedBrand == appliance) {
             // Add current appliance in list to found list
+            userfoundAppliances.Add(appliance);
+            }
 
-
+        }
             // Display found appliances
-            // DisplayAppliancesFromList(found, 0);
+            DisplayAppliancesFromList(userfoundAppliances, 0);
         }
 
         /// <summary>
@@ -88,16 +94,20 @@ namespace ModernAppliances
         public override void DisplayRefrigerators() //Written by David Cadena
         {
             // Write "Possible options:"
-
+            Console.WriteLine("Possible options:");
             // Write "0 - Any"
+            Console.WriteLine("0 - Any");
             // Write "2 - Double doors"
+            Console.WriteLine("2 - Double doors");
             // Write "3 - Three doors"
+            Console.WriteLine("3 - Three doors");
             // Write "4 - Four doors"
+            Console.WriteLine("4 - Four doors");
 
             // Write "Enter number of doors: "
-
+            Console.WriteLine("Enter number of doors: ");
             // Create variable to hold entered number of doors
-
+            var numDoors;
             // Get user input as string and assign to variable
 
             // Convert user input from string to int and store as number of doors variable.
@@ -105,12 +115,12 @@ namespace ModernAppliances
             // Create list to hold found Appliance objects
 
             // Iterate/loop through Appliances
-                // Test that current appliance is a refrigerator
-                    // Down cast Appliance to Refrigerator
-                    // Refrigerator refrigerator = (Refrigerator) appliance;
+            // Test that current appliance is a refrigerator
+            // Down cast Appliance to Refrigerator
+            // Refrigerator refrigerator = (Refrigerator) appliance;
 
-                    // Test user entered 0 or refrigerator doors equals what user entered.
-                        // Add current appliance in list to found list
+            // Test user entered 0 or refrigerator doors equals what user entered.
+            // Add current appliance in list to found list
 
             // Display found appliances
             // DisplayAppliancesFromList(found, 0);
