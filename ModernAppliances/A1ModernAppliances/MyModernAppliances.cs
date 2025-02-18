@@ -170,13 +170,13 @@ namespace ModernAppliances
                 grade = "Any";
             }
             // Test input is "1"
-            if (vacType == "1")
+            else if (vacType == "1")
             {
                 // Assign "Residential" to grade
                 grade = "Residential";
             }
             // Test input is "2"
-            if (vacType == "2")
+            else if (vacType == "2")
             {
                 // Assign "Commercial" to grade
                 grade = "Commercial";
@@ -212,13 +212,13 @@ namespace ModernAppliances
                 voltage = 0;
             }
             // Test input is "1"
-            if (voltageInput == "1")
+            else if (voltageInput == "1")
             {
                 // Assign 18 to voltage
                 voltage = 18;
             }
             // Test input is "2"
-            if (voltageInput == "2")
+            else if (voltageInput == "2")
             {
                 // Assign 24 to voltage
                 voltage = 24;
@@ -278,13 +278,13 @@ namespace ModernAppliances
             }
             // Test input is "1"
             // Assign 'K' to room type variable
-            if (userRoomType == "1")
+            else if (userRoomType == "1")
             {
                 roomtype = 'K';
             }
             // Test input is "2"
             // Assign 'W' to room type variable
-            if (userRoomType == "2")
+            else if (userRoomType == "2")
             {
                 roomtype = 'W';
             }
@@ -353,25 +353,25 @@ namespace ModernAppliances
             }
             // Test input is "1"
             // Assign "Qt" to sound rating variable
-            if (userSoundRating == "1")
+            else if (userSoundRating == "1")
             {
                 soundRating = "Qt";
             }
             // Test input is "2"
             // Assign "Qr" to sound rating variable
-            if (userSoundRating == "2")
+            else if (userSoundRating == "2")
             {
                 soundRating = "Qr";
             }
             // Test input is "3"
             // Assign "Qu" to sound rating variable
-            if (userSoundRating == "3")
+            else (userSoundRating == "3")
             {
                 soundRating = "Qu";
             }
             // Test input is "4"
             // Assign "M" to sound rating variable
-            if (userSoundRating == "4")
+            else if (userSoundRating == "4")
             {
                 soundRating = "M";
             }
@@ -447,28 +447,28 @@ namespace ModernAppliances
                 // Test inputted appliance type is "1"
                 // Test current appliance type is Refrigerator
                 // Add current appliance in list to found list
-                if (userApplianceType == "1")
+                else if (userApplianceType == "1")
                 {
                     randomFoundApplianceList.Add(appliance);
                 }
                 // Test inputted appliance type is "2"
                 // Test current appliance type is Vacuum
                 // Add current appliance in list to found list
-                if (userApplianceType == "2")
+                else if (userApplianceType == "2")
                 {
                     randomFoundApplianceList.Add(appliance);
                 }
                 // Test inputted appliance type is "3"
                 // Test current appliance type is Microwave
                 // Add current appliance in list to found list
-                if (userApplianceType == "3")
+                else if (userApplianceType == "3")
                 {
                     randomFoundApplianceList.Add(appliance);
                 }
                 // Test inputted appliance type is "4"
                 // Test current appliance type is Dishwasher
                 // Add current appliance in list to found list
-                if (userApplianceType == "4")
+                else if (userApplianceType == "4")
                 {
                     randomFoundApplianceList.Add(appliance);
                 }
