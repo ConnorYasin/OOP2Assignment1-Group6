@@ -237,14 +237,17 @@ namespace ModernAppliances
             foreach (Appliance appliance in Appliances)
             {
                 // Check if current appliance is vacuum
-                if (appliance is Vacuum) { }
-                // Down cast current Appliance to Vacuum object
-                Vacuum vacuum = (Vacuum)appliance;
+                if (appliance is Vacuum)
+                {
+                    // Down cast current Appliance to Vacuum object
+                    Vacuum vacuum = (Vacuum)appliance;
 
-                // Test grade is "Any" or grade is equal to current vacuum grade and voltage is 0 or voltage is equal to current vacuum voltage
-                if (grade == "Any" || (grade ==  vacuum.Grade && voltage == 0) || voltage == vacuum.BatteryVoltage) {
-                    // Add current appliance in list to found list
-                    vacuumfoundAppliances.Add(vacuum);
+                    // Test grade is "Any" or grade is equal to current vacuum grade and voltage is 0 or voltage is equal to current vacuum voltage
+                    if (grade == "Any" || (grade == vacuum.Grade && voltage == 0) || voltage == vacuum.BatteryVoltage)
+                    {
+                        // Add current appliance in list to found list
+                        vacuumfoundAppliances.Add(vacuum);
+                    }
                 }
                 // Display found appliances
                 DisplayAppliancesFromList(vacuumfoundAppliances, 0);
