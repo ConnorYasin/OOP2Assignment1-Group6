@@ -369,46 +369,73 @@ namespace ModernAppliances
         public override void RandomList() //Writen by Connor Yasinski
         {
             // Write "Appliance Types"
-
+            Console.WriteLine("Appliance Types");
             // Write "0 - Any"
+            Console.WriteLine("0 - Any");
             // Write "1 – Refrigerators"
+            Console.WriteLine("1 - Refrigerators");
             // Write "2 – Vacuums"
+            Console.WriteLine("2 - Vacuums");
             // Write "3 – Microwaves"
+            Console.WriteLine("3 - Microwaves");
             // Write "4 – Dishwashers"
-
+            Console.WriteLine("4 - Dishwashers");
             // Write "Enter type of appliance:"
-
+            Console.WriteLine("Enter type of appliance");
             // Get user input as string and assign to appliance type variable
-
+            string userApplianceType = Console.ReadLine();
             // Write "Enter number of appliances: "
-
+            Console.WriteLine("Enter number of appliances:");
             // Get user input as string and assign to variable
-
             // Convert user input from string to int
+            int userNumAppliances = Convert.ToInt32(Console.ReadLine());
 
             // Create variable to hold list of found appliances
-
+            var randomFoundApplianceList = new List<Appliance>();
             // Loop through appliances
+            foreach (Appliance appliance in Appliances)
+            {
                 // Test inputted appliance type is "0"
-                    // Add current appliance in list to found list
+                // Add current appliance in list to found list
+                if (userApplianceType == "0")
+                {
+                    randomFoundApplianceList.Add(appliance);
+                }
                 // Test inputted appliance type is "1"
-                    // Test current appliance type is Refrigerator
-                        // Add current appliance in list to found list
+                // Test current appliance type is Refrigerator
+                // Add current appliance in list to found list
+                if (userApplianceType == "1")
+                {
+                    randomFoundApplianceList.Add(appliance);
+                }
                 // Test inputted appliance type is "2"
-                    // Test current appliance type is Vacuum
-                        // Add current appliance in list to found list
+                // Test current appliance type is Vacuum
+                // Add current appliance in list to found list
+                if (userApplianceType == "2")
+                {
+                    randomFoundApplianceList.Add(appliance);
+                }
                 // Test inputted appliance type is "3"
-                    // Test current appliance type is Microwave
-                        // Add current appliance in list to found list
+                // Test current appliance type is Microwave
+                // Add current appliance in list to found list
+                if (userApplianceType == "3")
+                {
+                    randomFoundApplianceList.Add(appliance);
+                }
                 // Test inputted appliance type is "4"
-                    // Test current appliance type is Dishwasher
-                        // Add current appliance in list to found list
-
+                // Test current appliance type is Dishwasher
+                // Add current appliance in list to found list
+                if (userApplianceType == "4")
+                {
+                    randomFoundApplianceList.Add(appliance);
+                }
+            }
             // Randomize list of found appliances
             // found.Sort(new RandomComparer());
-
+            randomFoundApplianceList.Sort(new RandomComparer());
             // Display found appliances (up to max. number inputted)
             // DisplayAppliancesFromList(found, num);
+            DisplayAppliancesFromList(randomFoundApplianceList, userNumAppliances);
         }
     }
 }
