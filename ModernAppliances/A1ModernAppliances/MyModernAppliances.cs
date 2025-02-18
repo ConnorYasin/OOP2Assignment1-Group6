@@ -277,41 +277,79 @@ namespace ModernAppliances
         public override void DisplayDishwashers() //Writen by Connor Yasinski
         {
             // Write "Possible options:"
-
+            Console.WriteLine("Possible options");
             // Write "0 - Any"
+            Console.WriteLine("0 - Any");
             // Write "1 - Quietest"
+            Console.WriteLine("1 - Quietest");
             // Write "2 - Quieter"
+            Console.WriteLine("2 - Quieter");
             // Write "3 - Quiet"
+            Console.WriteLine("3 - Quiet");
             // Write "4 - Moderate"
-
+            Console.WriteLine("4 - Moderate");
             // Write "Enter sound rating:"
-
+            Console.WriteLine("Enter sound rating:");
             // Get user input as string and assign to variable
-
+            string userSoundRating = Console.ReadLine();
             // Create variable that holds sound rating
-
+            string soundRating;
             // Test input is "0"
-                // Assign "Any" to sound rating variable
+            // Assign "Any" to sound rating variable
+            if (userSoundRating == "0")
+            {
+                soundRating = "Any";
+            }
             // Test input is "1"
-                // Assign "Qt" to sound rating variable
+            // Assign "Qt" to sound rating variable
+            if (userSoundRating == "1")
+            {
+                soundRating = "Qt";
+            }
             // Test input is "2"
-                // Assign "Qr" to sound rating variable
+            // Assign "Qr" to sound rating variable
+            if (userSoundRating == "2")
+            {
+                soundRating = "Qr";
+            }
             // Test input is "3"
-                // Assign "Qu" to sound rating variable
+            // Assign "Qu" to sound rating variable
+            if (userSoundRating == "3")
+            {
+                soundRating = "Qu";
+            }
             // Test input is "4"
-                // Assign "M" to sound rating variable
+            // Assign "M" to sound rating variable
+            if (userSoundRating == "4")
+            {
+                soundRating = "M";
+            }
             // Otherwise (input is something else)
-                // Write "Invalid option."
-                // Return to calling method
-
+            // Write "Invalid option."
+            // Return to calling method
+            else
+            {
+                Console.WriteLine("Invalid option");
+                return;
+            }
             // Create variable that holds list of found appliances
-
+            var dishwasherFoundApplianceList = new List<Appliance>();
             // Loop through Appliances
-                // Test if current appliance is dishwasher
-                    // Down cast current Appliance to Dishwasher
-
+            // Test if current appliance is dishwasher
+            // Down cast current Appliance to Dishwasher
+            foreach (Appliance appliance in Appliances)
+            {
+                if (appliance is Dishwasher)
+                {
                     // Test sound rating is "Any" or equals soundrating for current dishwasher
-                        // Add current appliance in list to found list
+                    // Add current appliance in list to found list
+                    if ((soundRating == "Any") || ())
+                    {
+
+                    }
+                }
+            }
+
 
             // Display found appliances (up to max. number inputted)
             // DisplayAppliancesFromList(found, 0);
