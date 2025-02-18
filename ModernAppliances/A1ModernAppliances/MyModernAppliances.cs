@@ -249,9 +249,10 @@ namespace ModernAppliances
                         vacuumfoundAppliances.Add(vacuum);
                     }
                 }
-                // Display found appliances
-                DisplayAppliancesFromList(vacuumfoundAppliances, 0);
             }
+            // Display found appliances
+            DisplayAppliancesFromList(vacuumfoundAppliances, 0);
+            
         }
 
         /// <summary>
