@@ -242,10 +242,10 @@ namespace ModernAppliances
                 Vacuum vacuum = (Vacuum)appliance;
 
                 // Test grade is "Any" or grade is equal to current vacuum grade and voltage is 0 or voltage is equal to current vacuum voltage
-                if (grade == "Any")
-                // Add current appliance in list to found list
-
-            }
+                if (grade == "Any" || (grade ==  vacuum.Grade && voltage == 0) || voltage == vacuum.BatteryVoltage) {
+                    // Add current appliance in list to found list
+                    vacuumfoundAppliances.Add(appliance);
+                }
                 // Display found appliances
                 DisplayAppliancesFromList(vacuumfoundAppliances, 0);
             }
