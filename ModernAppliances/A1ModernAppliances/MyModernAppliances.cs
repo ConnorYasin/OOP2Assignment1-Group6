@@ -63,18 +63,19 @@ namespace ModernAppliances
         /// <summary>
         /// Option 2: Finds appliances
         /// </summary>
-        public override void Find()
+        public override void Find() //Written by David Cadena
         {
             // Write "Enter brand to search for:"
             Console.WriteLine("Enter brand to search for:");
             // Create string variable to hold entered brand
+            string selectedBrand = Convert.ToString(Console.Read());
             // Get user input as string and assign to variable.
 
             // Create list to hold found Appliance objects
 
             // Iterate through loaded appliances
-                // Test current appliance brand matches what user entered
-                    // Add current appliance in list to found list
+            // Test current appliance brand matches what user entered
+            // Add current appliance in list to found list
 
 
             // Display found appliances
@@ -84,7 +85,7 @@ namespace ModernAppliances
         /// <summary>
         /// Displays Refridgerators
         /// </summary>
-        public override void DisplayRefrigerators()
+        public override void DisplayRefrigerators() //Written by David Cadena
         {
             // Write "Possible options:"
 
@@ -120,7 +121,7 @@ namespace ModernAppliances
         /// </summary>
         /// <param name="grade">Grade of vacuum to find (or null for any grade)</param>
         /// <param name="voltage">Vacuum voltage (or 0 for any voltage)</param>
-        public override void DisplayVacuums()
+        public override void DisplayVacuums() //Written by David Cadena
         {
             // Write "Possible options:"
 
