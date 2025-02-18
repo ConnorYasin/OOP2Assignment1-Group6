@@ -315,7 +315,7 @@ namespace ModernAppliances
                     Microwave microwave = (Microwave)appliance;
                     // Test room type equals 'A' or microwave room type
                     // Add current appliance in list to found list
-                    if (roomtype == 'A')
+                    if ((roomtype == 'A') || (microwave.RoomType == roomtype))
                     {
                         microwaveFoundApplianceList.Add(microwave);
                     }
