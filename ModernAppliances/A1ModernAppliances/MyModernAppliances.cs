@@ -48,7 +48,13 @@ namespace ModernAppliances
             // Otherwise (appliance was found)
             // Test found appliance is available
             // Checkout found appliance
+            else 
+            {
+                if (foundAppliance.IsAvailable == true)
+                {
 
+                }
+            }
             // Write "Appliance has been checked out."
             // Otherwise (appliance isn't available)
             // Write "The appliance is not available to be checked out."
