@@ -17,7 +17,7 @@ namespace ModernAppliances
         public override void Checkout() //Writen by Connor Yasinski
         {
             // Write "Enter the item number of an appliance: "
-            Console.WriteLine("Enter the item number of an appliance");
+            Console.WriteLine("Enter the item number of an appliance: ");
             // Create long variable to hold item number
             long applianceNumber;
             // Get user input as string and assign to variable.
@@ -44,7 +44,7 @@ namespace ModernAppliances
             // Write "No appliances found with that item number."
             if (foundAppliance is null)
             {
-                Console.WriteLine("No appliances found with that number");
+                Console.WriteLine("No appliances found with that item number.");
             }
             // Otherwise (appliance was found)
             // Test found appliance is available
@@ -54,12 +54,12 @@ namespace ModernAppliances
                 if (foundAppliance.IsAvailable == true)
                 {
                     foundAppliance.Checkout();
-                    Console.WriteLine("Appliance has been checked out");
+                    Console.WriteLine("Appliance has been checked out.");
                     // Write "Appliance has been checked out."
                 }
                 else 
                 {
-                    Console.WriteLine("The appliance is not availible to be checked out");
+                    Console.WriteLine("The appliance is not availible to be checked out.");
                     // Otherwise (appliance isn't available)
                     // Write "The appliance is not available to be checked out."
                 }
@@ -185,13 +185,13 @@ namespace ModernAppliances
             else
             {
                 // Write "Invalid option."
-                Console.WriteLine("Invalid Options");
+                Console.WriteLine("Invalid option.");
                 // Return to calling (previous) method
                 return;
             }
 
             // Write "Possible options:"
-            Console.WriteLine("Possible options");
+            Console.WriteLine("Possible options:");
             // Write "0 - Any"
             Console.WriteLine("0 - Any");
             // Write "1 - 18 Volt"
@@ -200,7 +200,7 @@ namespace ModernAppliances
             Console.WriteLine("2 - 24 Volt");
 
             // Write "Enter voltage:"
-            Console.WriteLine("Enter voltage");
+            Console.WriteLine("Enter voltage:");
             // Get user input as string
             string voltageInput = Console.ReadLine();
             // Create variable to hold voltage
@@ -227,7 +227,7 @@ namespace ModernAppliances
             {
                 // Otherwise
                 // Write "Invalid option."
-                Console.WriteLine("Invalid Option");
+                Console.WriteLine("Invalid option.");
                 // Return to calling (previous) method
                 return;
             }
@@ -257,7 +257,7 @@ namespace ModernAppliances
         public override void DisplayMicrowaves() //Writen by Connor Yasinski
         {
             // Write "Possible options:"
-            Console.WriteLine("Possible options");
+            Console.WriteLine("Possible options:");
             // Write "0 - Any"
             // Write "1 - Kitchen"
             // Write "2 - Work site"
@@ -294,7 +294,7 @@ namespace ModernAppliances
             // return;
             else
             {
-                Console.WriteLine("Invalid option");
+                Console.WriteLine("Invalid option.");
                 return;
             }
 
@@ -328,7 +328,7 @@ namespace ModernAppliances
         public override void DisplayDishwashers() //Writen by Connor Yasinski
         {
             // Write "Possible options:"
-            Console.WriteLine("Possible options");
+            Console.WriteLine("Possible options:");
             // Write "0 - Any"
             Console.WriteLine("0 - Any");
             // Write "1 - Quietest"
@@ -380,7 +380,7 @@ namespace ModernAppliances
             // Return to calling method
             else
             {
-                Console.WriteLine("Invalid option");
+                Console.WriteLine("Invalid option.");
                 return;
             }
             // Create variable that holds list of found appliances
@@ -424,11 +424,11 @@ namespace ModernAppliances
             // Write "4 – Dishwashers"
             Console.WriteLine("4 - Dishwashers");
             // Write "Enter type of appliance:"
-            Console.WriteLine("Enter type of appliance");
+            Console.WriteLine("Enter type of appliance:");
             // Get user input as string and assign to appliance type variable
             string userApplianceType = Console.ReadLine();
             // Write "Enter number of appliances: "
-            Console.WriteLine("Enter number of appliances:");
+            Console.WriteLine("Enter number of appliances: ");
             // Get user input as string and assign to variable
             // Convert user input from string to int
             int userNumAppliances = Convert.ToInt32(Console.ReadLine());
