@@ -33,11 +33,12 @@ namespace ModernAppliances
             {
                 if (appliance.ItemNumber == applianceNumber)
                 {
+                    // Break out of loop (since we found what need to)
                     foundAppliance = appliance;
                     break;
                 }
             }
-            // Break out of loop (since we found what need to)
+            
 
             // Test appliance was not found (foundAppliance is null)
             // Write "No appliances found with that item number."
@@ -52,12 +53,19 @@ namespace ModernAppliances
             {
                 if (foundAppliance.IsAvailable == true)
                 {
-
+                    foundAppliance.Checkout();
+                    Console.WriteLine("Appliance has been checked out");
+                    // Write "Appliance has been checked out."
+                }
+                else 
+                {
+                    Console.WriteLine("The appliance is not availible to be checked out");
+                    // Otherwise (appliance isn't available)
+                    // Write "The appliance is not available to be checked out."
                 }
             }
-            // Write "Appliance has been checked out."
-            // Otherwise (appliance isn't available)
-            // Write "The appliance is not available to be checked out."
+
+
         }
 
         /// <summary>
@@ -199,39 +207,68 @@ namespace ModernAppliances
         public override void DisplayMicrowaves() //Writen by Connor Yasinski
         {
             // Write "Possible options:"
-
+            Console.WriteLine("Possible options");
             // Write "0 - Any"
             // Write "1 - Kitchen"
             // Write "2 - Work site"
-
+            Console.WriteLine("0 - Any");
+            Console.WriteLine("1 - Kitchen");
+            Console.WriteLine("2 - Work site");
             // Write "Enter room type:"
-
+            Console.WriteLine("Enter room type:");
             // Get user input as string and assign to variable
-
+            string userRoomType = Console.ReadLine();
             // Create character variable that holds room type
-
+            char roomtype;
             // Test input is "0"
-                // Assign 'A' to room type variable
+            // Assign 'A' to room type variable
+            if (userRoomType == "0")
+            {
+                roomtype = 'A';
+            }
             // Test input is "1"
-                // Assign 'K' to room type variable
+            // Assign 'K' to room type variable
+            if (userRoomType == "1")
+            {
+                roomtype = 'K';
+            }
             // Test input is "2"
-                // Assign 'W' to room type variable
+            // Assign 'W' to room type variable
+            if (userRoomType == "2")
+            {
+                roomtype = 'W';
+            }
             // Otherwise (input is something else)
-                // Write "Invalid option."
-                // Return to calling method
-                // return;
+            // Write "Invalid option."
+            // Return to calling method
+            // return;
+            else
+            {
+                Console.WriteLine("Invalid option");
+                return;
+            }
 
+            
             // Create variable that holds list of 'found' appliances
-
+            var microwaveFoundApplianceList = new List<Appliance>();
             // Loop through Appliances
-                // Test current appliance is Microwave
-                    // Down cast Appliance to Microwave
-
+            // Test current appliance is Microwave
+            // Down cast Appliance to Microwave
+            foreach (Appliance appliance in Appliances)
+            {
+                if (appliance is Microwave)
+                {
                     // Test room type equals 'A' or microwave room type
-                        // Add current appliance in list to found list
-
+                    // Add current appliance in list to found list
+                    if (roomtype == 'A')
+                    {
+                        microwaveFoundApplianceList.Add(appliance);
+                    }
+                }
+            }
             // Display found appliances
             // DisplayAppliancesFromList(found, 0);
+            DisplayAppliancesFromList(microwaveFoundApplianceList, 0);
         }
 
         /// <summary>
